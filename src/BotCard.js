@@ -13,10 +13,10 @@ const Botcard = ({
       <div className="card">
         <img src={bot.avatar_url} alt="bot" />
         <div>
-          <p>
+          <div>
             <h3>Name: {bot.name}</h3>
             <Link to={`/botspecs/${bot.id}`}>View specs</Link>
-          </p>
+          </div>
 
           {enlist ? (
             <button onClick={() => addArmyBot(bot)}>Enlist to army</button>
