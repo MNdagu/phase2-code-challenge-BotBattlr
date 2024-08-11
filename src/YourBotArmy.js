@@ -1,22 +1,22 @@
 import React from 'react';
 import Botcard from "./BotCard";
 
-const YourBotArmy = ({ armyBots, removeBotFromArmy }) => {
-//   console.log(armyBots);
+const YourBotArmy = ({ armyBots, removeBotFromArmy, dischargeBot}) => {
   return (
     <>
       <h1>Your Bot Army</h1>
-      <div className="row">
+      {armyBots.length > 0 ? <div className="row">
         {armyBots.map((bot) => (
           <div className="column" key={bot.id}>
             <Botcard 
             bot={bot} 
             removeBotFromArmy={removeBotFromArmy} 
-            showDischarge={false} 
+            dischargeBot={dischargeBot} 
             enlist = {false} />
           </div>
         ))}
-      </div>
+      </div> : <h2>Oops! You are armyless!</h2>}
+      
     </>
   );
 };

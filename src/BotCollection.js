@@ -13,7 +13,6 @@ const BotCollection = ({ bots, addArmyBot, dischargeBot }) => {
             key={bot.id} 
             addArmyBot={addArmyBot}  
             dischargeBot={dischargeBot} 
-            showDischarge={true} 
             enlist={true}/>
           </div>
         ))}

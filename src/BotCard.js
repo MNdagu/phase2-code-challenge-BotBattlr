@@ -1,6 +1,6 @@
 import React from "react";
 
-const Botcard = ({ bot, dischargeBot, addArmyBot, removeBotFromArmy, showDischarge, enlist }) => {
+const Botcard = ({ bot, dischargeBot, addArmyBot, removeBotFromArmy, enlist }) => {
   return (
     <>
       <div className="card">
@@ -20,14 +20,14 @@ const Botcard = ({ bot, dischargeBot, addArmyBot, removeBotFromArmy, showDischar
             <button onClick={() => removeBotFromArmy(bot)}>Remove</button>
           )}
 
-          {showDischarge && (
+          
             <button
               onClick={() => dischargeBot(bot)}
               style={{ "background-color": "red" }}
             >
               X
             </button>
-          )}
+          
         </div>
       </div>
     </>

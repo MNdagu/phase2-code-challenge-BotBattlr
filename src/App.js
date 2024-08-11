@@ -4,10 +4,12 @@ import BotCollection from "./BotCollection";
 import YourBotArmy from "./YourBotArmy";
 import Navbar from "./Navbar";
 import { Route, Routes } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const [bots, setBots] = useState([]);
   const [armyBots, setArmyBots] = useState([]);
+  const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -22,6 +24,7 @@ function App() {
   const addArmyBot = (bot) => {
     if(!armyBots.find((b) => b.id === bot.id)){
       setArmyBots([...armyBots, bot])
+      navigate("/yourbotarmy")
     };
   };
 
@@ -54,7 +57,7 @@ function App() {
 
       <Route
       path="/yourbotarmy"
-      element={<YourBotArmy armyBots={armyBots} removeBotFromArmy={removeBotFromArmy}/>}
+      element={<YourBotArmy armyBots={armyBots} removeBotFromArmy={removeBotFromArmy} dischargeBot={dischargeBot}/>}
       />
       
       
