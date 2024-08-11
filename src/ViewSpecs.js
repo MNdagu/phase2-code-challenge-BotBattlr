@@ -19,7 +19,7 @@ const ViewSpecs = ({ addArmyBot }) => {
   return (
     <>
     <h1>Bot specs</h1>
-      <main className="specs">
+      <div className="specs">
         <h1>Name : {bot.name}</h1>
         <h4>Health: {bot.health}</h4>
         <h4>Damage: {bot.damage}</h4>
@@ -29,7 +29,7 @@ const ViewSpecs = ({ addArmyBot }) => {
         <h4>Updated at: {bot.updated_at}</h4>
 
         <button
-          style={{ width: "10%", marginLeft: "700px" }}
+          style={{ width: "10%", marginLeft: "700px" , marginBottom:"10px"}}
           onClick={() => navigate("/")}
         >
           Back
@@ -40,7 +40,7 @@ const ViewSpecs = ({ addArmyBot }) => {
         >
           Enlist to army
         </button>
-      </main>
+      </div>
     </>
   );
 };
