@@ -1,18 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Botcard = ({ bot, dischargeBot, addArmyBot, removeBotFromArmy, enlist }) => {
+const Botcard = ({
+  bot,
+  dischargeBot,
+  addArmyBot,
+  removeBotFromArmy,
+  enlist,
+}) => {
   return (
     <>
       <div className="card">
         <img src={bot.avatar_url} alt="bot" />
         <div>
-          <h3>Name: {bot.name}</h3>
-          <p>Health: {bot.health}</p>
-          <p>Damage: {bot.damage}</p>
-          <p>Armor: {bot.armor}</p>
-          <p>Class: {bot.bot_class}</p>
-          <p>Created at: {bot.created_at}</p>
-          <p>Updated at: {bot.updated_at}</p>
+          <p>
+            <h3>Name: {bot.name}</h3>
+            <Link to={`/botspecs/${bot.id}`}>View specs</Link>
+          </p>
 
           {enlist ? (
             <button onClick={() => addArmyBot(bot)}>Enlist to army</button>
@@ -20,14 +24,12 @@ const Botcard = ({ bot, dischargeBot, addArmyBot, removeBotFromArmy, enlist }) =
             <button onClick={() => removeBotFromArmy(bot)}>Remove</button>
           )}
 
-          
-            <button
-              onClick={() => dischargeBot(bot)}
-              style={{ "background-color": "red" }}
-            >
-              X
-            </button>
-          
+          <button
+            onClick={() => dischargeBot(bot)}
+            style={{ backgroundColor: "red" }}
+          >
+            X
+          </button>
         </div>
       </div>
     </>

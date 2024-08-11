@@ -1,74 +1,20 @@
-/* * {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.column {
-  float: left;
-  width: 20%;
-  padding: 10px 10px;
-}
-
-.row {margin: 0 -5px;}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-img{
-  width: 50%;
-}
-
-.nav-link{
-  display: inline-block;
-  box-sizing: border-box;
-  width: 60px;
-  padding: 5px;
-  margin: 0 6px 6px;
-  background: blue;
-  text-decoration: none;
-  text-align: center;
-  font-size: min(10vw, 15px) ;
-  color: white;
-}
-
-.active {
-  color: red;
-}
- */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Pacifico&display=swap');
 
 * {
   box-sizing: border-box;
+  font-family: Comfortaa, sans-serif;
+
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+body{
+  background-color: #0F6A80;
 }
 
 .nav-link {
   display: inline-block;
   padding: 10px;
   margin: 10px;
-  background-color: blue;
+  background-color: #006570;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -83,12 +29,13 @@ body {
   padding: 20px;
   margin: 10px;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: indianred;
+  border-radius: 10px;
 }
 
 .column {
   float: left;
-  width: 30%;
+  width: 20%;
   padding: 10px;
 }
 
@@ -98,7 +45,6 @@ body {
   clear: both;
 }
 
-/* Responsive columns */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
@@ -107,4 +53,39 @@ body {
 
 img {
   width: 50%;
+}
+
+.specs{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  background-color: indianred;
+}
+
+button{
+
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  height: 36px;
+  line-height: 34px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #007c89;
+  transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+  padding: 0 18px;
+  
+
+}
+
+button:hover {
+  color: #ffffff;
+  background-color: #006570;
 }
