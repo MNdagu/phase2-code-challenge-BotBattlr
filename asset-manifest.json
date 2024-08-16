@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/phase2-code-challenge-BotBattlr/static/css/main.b5220aa2.css",
+    "main.js": "/phase2-code-challenge-BotBattlr/static/js/main.2aafae13.js",
+    "index.html": "/phase2-code-challenge-BotBattlr/index.html",
+    "main.b5220aa2.css.map": "/phase2-code-challenge-BotBattlr/static/css/main.b5220aa2.css.map",
+    "main.2aafae13.js.map": "/phase2-code-challenge-BotBattlr/static/js/main.2aafae13.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5220aa2.css",
+    "static/js/main.2aafae13.js"
+  ]
+}
